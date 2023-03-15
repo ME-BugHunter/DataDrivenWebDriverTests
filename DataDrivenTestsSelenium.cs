@@ -44,6 +44,10 @@ namespace DataDrivenWebDriverTests
         [TestCase("90", "/", "-9", "Result: -10")]
         [TestCase("-90", "+", "-9", "Result: -99")]
         [TestCase("-90", "+", "hello", "Result: invalid input")]
+        [TestCase("8.99", "/", "10", "Result: 0.899")]
+        [TestCase("8.99", "+", "10", "Result: 18.99")]
+        [TestCase("8.99", "*", "10", "Result: 89.9")]
+
         public void TestCalculatorFunctions(string firstNum, string operation, string secondNum, string expectedResult)
         {
             resetButton.Click();
